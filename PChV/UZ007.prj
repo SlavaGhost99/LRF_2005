@@ -1,0 +1,757 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <item name="Группа 0. Управление и отображение">
+    <item number="0-03" name="Региональные настройки" type="Uint8" range="0,1" dec="29" hex="1D" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="0-04" name="Режим работы при включении питания" type="Uint8" range="0,1,2" dec="39" hex="27" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="0-10" name="Активный набор" type="Uint8" range="1;2;9" dec="99" hex="63" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="0-11" name="Изменяемый набор" type="Uint8" range="1;2;9" dec="109" hex="6D" modify="ДА" mul="1" default="1" read="2">
+    </item>
+    <item number="0-12" name="Взаимосвязь наборов" type="Uint8" range="0,20" dec="119" hex="77" modify="ДА" mul="1" default="20" read="20">
+    </item>
+    <item number="0-31" name="Минимальное значение показаний" type="Int32" range="0.00-9999" dec="309" hex="135" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="0-32" name="Максимальное значение показаний" type="Int32" range="0.00-9999" dec="319" hex="13F" modify="ДА" mul="0.01" default="100.0" read="100">
+    </item>
+    <item number="0-40" name="Кнопка «РУЧН.»" type="Uint8" range="0,1" dec="399" hex="18F" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="0-41" name="Кнопка «СБРОС/СТОП»" type="Uint8" range="0,1,2" dec="409" hex="199" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="0-42" name="Кнопка «АВТО»" type="Uint8" range="0,1" dec="419" hex="1A3" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="0-50" name="Выбор функции копирования" type="Uint8" range="0,1,2,3" dec="499" hex="1F3" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="0-51" name="Выбор набора для копирования" type="Uint8" range="0,1,2,9" dec="509" hex="1FD" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="0-60" name="Пароль главного меню" type="Uint16" range="0-999" dec="599" hex="1FD" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="0-61" name="Режим пароля" type="Uint8" range="0-2" dec="609" hex="" modify="ДА" mul="1" default="0" read="0">
+    </item>
+  </item>
+  <item name="Группа 1. Нагрузка/ электродвигатель.">
+    <item number="1-00" name="Режим управления" type="Uint8" range="0,3" dec="999" hex="3E7" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="1-01" name="Принцип управления электродвигателем" type="Uint8" range="0,1" dec="1009" hex="3F1" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="1-03" name="Характеристика крутящего момента" type="Uint8" range="0,2" dec="1029" hex="405" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="1-05" name="Конфигурационный режим локального управления" type="Uint8" range="0,2" dec="1049" hex="419" modify="ДА" mul="1" default="2" read="2">
+    </item>
+    <item number="1-20" name="Мощность двигателя" type="Uint16" range="1-20" dec="1199" hex="4AF" modify="ДА" mul="1" read="13">
+    </item>
+    <item number="1-22" name="Напряжение двигателя (В)." type="Uint16" range="50-999" dec="1219" hex="4C3" modify="ДА" mul="1" default="400" read="400">
+    </item>
+    <item number="1-23" name="Частота двигателя (Гц)." type="Uint16" range="20-400" dec="1229" hex="4CD" modify="ДА" mul="1" default="50" read="50">
+    </item>
+    <item number="1-24" name="Ток двигателя (А)." type="Uint16" range="0,01-43,00" dec="1239" hex="4D7" modify="ДА" mul="0.01" read="9">
+    </item>
+    <item number="1-25" name="Номинальная скорость двигателя (об./мин)" type="Uint16" range="100-9999" dec="1249" hex="4E1" modify="ДА" mul="1" read="1420">
+    </item>
+    <item number="1-29" name="Автоматическая адаптация двигателя (ААД)" type="Uint8" range="0,2" dec="1289" hex="509" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="1-30" name="Активное сопротивление статора (Rs) (Ом)." type="Uint16" range="" dec="1299" hex="513" modify="ДА" mul="0.01" read="0.87">
+    </item>
+    <item number="1-33" name="Реактивное сопротивление рассеяния статора (Х1) (Ом)." type="Uint32" range="" dec="1329" hex="531" modify="ДА" mul="0.01" read="2.56">
+    </item>
+    <item number="1-35" name="Основное реактивное сопротивление (Xh) (Ом)" type="Uint32" range="" dec="1349" hex="545" modify="ДА" mul="0.01" read="64.14">
+    </item>
+    <item number="1-50" name="Намагничивание двигателя при нулевой скорости (%)." type="Uint16" range="0-300" dec="1499" hex="5DB" modify="ДА" mul="1" default="100" read="100">
+    </item>
+    <item number="1-52" name="Минимальная скорость нормального намагничивания [Гц]." type="Uint16" range="0,0-10,0" dec="1519" hex="5EF" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="1-55" name="Характеристика (U/f – U) (В) [0]." reg="8" regidx="0" type="Uint16" range="0,0-999,9" dec="1549" hex="60D" modify="ДА" mul="1" default="0.0" read="0">
+    </item>
+    <item number="1-55" name="Характеристика (U/f – U) (В) [1]." reg="8" regidx="1" type="Uint16" range="0,0-999,9" dec="1549" hex="60D" modify="ДА" mul="1" default="0.0" read="400">
+    </item>
+    <item number="1-55" name="Характеристика (U/f – U) (В) [2]." reg="8" regidx="2" type="Uint16" range="0,0-999,9" dec="1549" hex="60D" modify="ДА" mul="1" default="0.0" read="400">
+    </item>
+    <item number="1-55" name="Характеристика (U/f – U) (В) [3]." reg="8" regidx="3" type="Uint16" range="0,0-999,9" dec="1549" hex="60D" modify="ДА" mul="1" default="0.0" read="400">
+    </item>
+    <item number="1-55" name="Характеристика (U/f – U) (В) [4]." reg="8" regidx="4" type="Uint16" range="0,0-999,9" dec="1549" hex="60D" modify="ДА" mul="1" default="0.0" read="400">
+    </item>
+    <item number="1-55" name="Характеристика (U/f – U) (В) [5]." reg="8" regidx="5" type="Uint16" range="0,0-999,9" dec="1549" hex="60D" modify="ДА" mul="1" default="0.0" read="400">
+    </item>
+    <item number="1-56" name="Характеристика (U/f – F) (Гц) [0]." reg="8" regidx="0" type="Uint16" range="0,00-400" dec="1559" hex="617" modify="ДА" mul="1" default="0.0" read="0">
+    </item>
+    <item number="1-56" name="Характеристика (U/f – F) (Гц) [1]." reg="8" regidx="1" type="Uint16" range="0,00-400" dec="1559" hex="617" modify="ДА" mul="1" default="0.0" read="50">
+    </item>
+    <item number="1-56" name="Характеристика (U/f – F) (Гц) [2]." reg="8" regidx="2" type="Uint16" range="0,00-400" dec="1559" hex="617" modify="ДА" mul="1" default="0.0" read="50">
+    </item>
+    <item number="1-56" name="Характеристика (U/f – F) (Гц) [3]." reg="8" regidx="3" type="Uint16" range="0,00-400" dec="1559" hex="617" modify="ДА" mul="1" default="0.0" read="50">
+    </item>
+    <item number="1-56" name="Характеристика (U/f – F) (Гц) [4]." reg="8" regidx="4" type="Uint16" range="0,00-400" dec="1559" hex="617" modify="ДА" mul="1" default="0.0" read="50">
+    </item>
+    <item number="1-56" name="Характеристика (U/f – F) (Гц) [5]." reg="8" regidx="5" type="Uint16" range="0,00-400" dec="1559" hex="617" modify="ДА" mul="1" default="0.0" read="50">
+    </item>
+    <item number="1-60" name="Компенсация нагрузки на низкой скорости (%)." type="Uint16" range="0-199%" dec="1599" hex="63F" modify="ДА" mul="1" default="100" read="100">
+    </item>
+    <item number="1-61" name="Компенсация нагрузки на высокой скорости (%)." type="Uint16" range="0-199%" dec="1609" hex="649" modify="ДА" mul="1" default="100" read="100">
+    </item>
+    <item number="1-62" name="Компенсация скольжения двигателя в зависимости от нагрузки (%)." type="Int16" range="-400-399" dec="1619" hex="653" modify="ДА" mul="1" read="100">
+    </item>
+    <item number="1-63" name="Пост. времени компенсации скольжения (секунды)." type="Uint16" range="0,05-5,00с" dec="1629" hex="65D" modify="ДА" mul="0.01" default="0.10" read="0.1">
+    </item>
+    <item number="1-71" name="Задержка запуска (секунды)" type="Uint16" range="0,0-10,00с" dec="1709" hex="6AD" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="1-72" name="Функция запуска" type="Uint8" range="0;1;2" dec="1719" hex="6B7" modify="ДА" mul="1" default="2" read="2">
+    </item>
+    <item number="1-73" name="Запуск с хода" type="Uint8" range="0;1" dec="1729" hex="6C1" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="1-80" name="Функция при останове" type="Uint8" range="0;1" dec="1799" hex="707" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="1-82" name="Минимальная скорость для функции при останове (Гц)" type="Uint16" range="0,0-20,0" dec="1819" hex="71B" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="1-90" name="Тепловая защита двигателя." type="Uint8" range="0;1;2;3;4" dec="1899" hex="76B" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="1-93" name="Источник термистора: выбор входной клеммы термистора." type="Uint8" range="0;1;6" dec="1929" hex="789" modify="ДА" mul="1" default="0" read="0">
+    </item>
+  </item>
+  <item name="Группа 2. Торможение двигателя постоянным током">
+    <item number="2-00" name="Удержание постоянным током(%)." type="Uint8" range="0-150%" dec="1999" hex="7CF" modify="ДА" mul="1" default="50" read="50">
+    </item>
+    <item number="2-01" name="Ток торможения постоянным током(%)." type="Uint8" range="0-150%" dec="2009" hex="7D9" modify="ДА" mul="1" default="50" read="50">
+    </item>
+    <item number="2-02" name="Время торможения постоянным током (секунды)." type="Uint16" range="0.0-60.0;" dec="2019" hex="7E3" modify="ДА" mul="0.1" default="10" read="10">
+    </item>
+    <item number="2-04" name="Скорость включения торможения постоянным током(Гц)." type="Uint16" range="0.0-400.0" dec="2039" hex="7F7" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="2-10" name="Функция торможения." type="Uint8" range="0;1;2" dec="2099" hex="833" modify="ДА" mul="1" default="0.0" read="0">
+    </item>
+    <item number="2-11" name="Тормозной резистор (ом)." type="Uint16" range="5-5000" dec="2109" hex="83D" modify="ДА" mul="1" default="5" read="82">
+    </item>
+    <item number="2-16" name="Максимально допустимый ток для торможения переменным током (%)" type="Uint16" range="0-150" dec="2159" hex="86F" modify="ДА" mul="1" default="100" read="100">
+    </item>
+    <item number="2-17" name="Контроль перенапряжения." type="Uint8" range="0;1;2" dec="2169" hex="879" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="2-20" name="Ток отпускания тормоза (А)." type="Uint32" range="0.00-100.0" dec="2199" hex="897" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="2-22" name="Скорость включения тормоза (Гц)." type="Uint16" range="0.0-400.0" dec="2219" hex="8AB" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+  </item>
+  <item name="Группа 3. Источники сигналов, единицы измерения, пределы и диапазоны">
+    <item number="3-00" name="Диапазон задания." type="Uint8" range="0;1" dec="2999" hex="BB7" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="3-02" name="Минимальное задание." type="Int32" range="-4999-4999" dec="3019" hex="BCB" modify="ДА" mul="0.001" default="0.000" read="0">
+    </item>
+    <item number="3-03" name="Максимальное задание." type="Int32" range="-4999-4999" dec="3029" hex="BD5" modify="ДА" mul="0.001" default="50.00" read="50">
+    </item>
+    <item number="3-10" name="Предустановленное задание [0]." reg="8" regidx="0" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00" read="30" write="">
+    </item>
+    <item number="3-10" name="Предустановленное задание [1]." reg="8" regidx="1" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00" read="10" write="">
+    </item>
+    <item number="3-10" name="Предустановленное задание [2]." reg="8" regidx="2" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="3-10" name="Предустановленное задание [3]." reg="8" regidx="3" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="3-10" name="Предустановленное задание [4]." reg="8" regidx="4" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="3-10" name="Предустановленное задание [5]." reg="8" regidx="5" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="3-10" name="Предустановленное задание [6]." reg="8" regidx="6" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="3-10" name="Предустановленное задание [7]." reg="8" regidx="7" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="3-11" name="Фиксированная скорость (Гц)" type="Uint16" range="0.0-400.0" dec="3109" hex="C25" modify="ДА" mul="0.1" default="5.0" read="5">
+    </item>
+    <item number="3-12" name="Значение разгона/замедления (%)." type="Uint16" range="0.00-100.0" dec="3119" hex="C2F" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="3-14" name="Предустановленное относительное задание (%)." type="Int16" range="-100.0-100.0" dec="3139" hex="C43" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="3-15" name="Источник задания 1" type="Uint8" range="0;1;2;8;11;21" dec="3149" hex="C4D" modify="ДА" mul="1" default="1" read="0" write="">
+    </item>
+    <item number="3-16" name="Источник задания 2" type="Uint8" range="0;1;2;8;11;21" dec="3159" hex="C57" modify="ДА" mul="1" default="2" read="0" write="">
+    </item>
+    <item number="3-17" name="Источник задания 3" type="Uint8" range="0;1;2;8;11;21" dec="3169" hex="C61" modify="ДА" mul="1" default="11" read="0" write="">
+    </item>
+    <item number="3-18" name="Источник относительного масштабирования" type="Uint8" range="0;1;2;8;11;2;21" dec="3179" hex="C6B" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="3-40" name="Изменение скорости, тип 1" type="Uint8" range="0;2" dec="3399" hex="D47" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="3-41" name="Время разгона 1(секунды)" type="Uint32" range="0,05 - 3600" dec="3409" hex="D51" modify="ДА" mul="0.01" default="3.00" read="5">
+    </item>
+    <item number="3-42" name="Время замедления 1 (секунды)" type="Uint32" range="0,05 - 3600" dec="3419" hex="D5B" modify="ДА" mul="0.01" default="3.00" read="5">
+    </item>
+    <item number="3-50" name="Изменение скорости, тип 2" type="Uint8" range="0;2" dec="3499" hex="DAB" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="3-51" name="Время разгона 2(секунды)" type="Uint32" range="0,05 - 3600" dec="3509" hex="DB5" modify="ДА" mul="0.01" default="3.00" read="5">
+    </item>
+    <item number="3-52" name="Время замедления 2 (секунды)" type="Uint32" range="0,05 - 3600" dec="3519" hex="DBF" modify="ДА" mul="0.01" default="3.00" read="5">
+    </item>
+    <item number="3-80" name="Темп изменения скорости при переходе на фиксированную скорость (секунды)." type="Uint32" range="0,10 - 3600" dec="3799" hex="ED7" modify="ДА" mul="0.01" default="3.0" read="5">
+    </item>
+    <item number="3-81" name="Время замедления для быстрого останова (секунды)." type="Uint32" range="0,10 - 3600" dec="3809" hex="EE1" modify="ДА" mul="0.01" default="3.0" read="5">
+    </item>
+  </item>
+  <item name="Группа 4. Пределы и предупреждения">
+    <item number="4-10" name="Направление вращения двигателя." type="Uint8" range="0;1;2" dec="4099" hex="1003" modify="ДА" mul="1" default="2" read="2">
+    </item>
+    <item number="4-12" name="Нижний предел скорости вращения двигателя (Гц)" type="Uint16" range="0-400" dec="4119" hex="1017" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="4-14" name="Верхний предел скорости вращения двигателя (Гц)" type="Uint16" range="0-400;" dec="4139" hex="102B" modify="ДА" mul="0.1" default="65.0" read="50" write="">
+    </item>
+    <item number="4-16" name="Двигательный режим с ограничением момента (%)" type="Uint16" range="0-400" dec="4159" hex="103F" modify="ДА" mul="1" default="150" read="150">
+    </item>
+    <item number="4-17" name="Режим генератора с ограничением момента (%)" type="Uint16" range="0-400" dec="4169" hex="1049" modify="ДА" mul="1" default="150" read="100">
+    </item>
+    <item number="4-50" name="Предупреждение:низкий ток (А)" type="Uint32" range="0.00-60.00" dec="4499" hex="1193" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="4-51" name="Предупреждение: высокий ток (А)" type="Uint32" range="0.00-60.00" dec="4509" hex="119D" modify="ДА" mul="0.01" default="60.00" read="100">
+    </item>
+    <item number="4-58" name="Обнаружение обрыва фазы двигателя." type="Uint8" range="0;1" dec="4579" hex="11E3" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="4-61" name="«Исключить скорость с »(Байпас скорости с) (Гц) [0]." reg="8" regidx="0" type="Uint16" range="0.0-400.0" dec="4609" hex="1201" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="4-61" name="«Исключить скорость с »(Байпас скорости с) (Гц) [1]." reg="8" regidx="1" type="Uint16" range="0.0-400.0" dec="4609" hex="1201" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="4-63" name="«Исключить скорость до» (Байпас скорости до) (Гц) [0]." reg="8" regidx="0" type="Uint16" range="0.0-400.0" dec="4629" hex="1215" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="4-63" name="«Исключить скорость до» (Байпас скорости до) (Гц) [1]." reg="8" regidx="1" type="Uint16" range="0.0-400.0" dec="4629" hex="1215" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+  </item>
+  <item name="Группа 5. Цифровой ввод/вывод.">
+    <item number="5-10" name="Клемма 18, цифровой вход" type="Uint8" range="0-6;8-14;16-23;26-29;32;34;42;60-65" dec="5099" hex="13EB" modify="ДА" mul="1" default="8" read="8" write="">
+    </item>
+    <item number="5-11" name="Клемма 19, цифровой вход" type="Uint8" range="0-6;8-14;16-23;26-29;32;34;42;60-65" dec="5109" hex="13F5" modify="ДА" mul="1" default="10" read="16" write="">
+    </item>
+    <item number="5-12" name="Клемма 27, цифровой вход" type="Uint8" range="0-6;8-14;16-23;26-29;32;34;42;60-65" dec="5119" hex="13FF" modify="ДА" mul="1" default="0" read="17" write="">
+    </item>
+    <item number="5-13" name="Клемма 29, цифровой вход" type="Uint8" range="0-6;8-14;16-23;26-29;32;34;42;60-65" dec="5129" hex="1409" modify="ДА" mul="1" default="14" read="14">
+    </item>
+    <item number="5-15" name="Клемма 33, цифровой вход" type="Uint8" range="0-6;8-14;16-23;26-29;32;34;42;60-65" dec="5149" hex="141D" modify="ДА" mul="1" default="16" read="16">
+    </item>
+    <item number="5-40" name="Реле функций" type="Uint8" range="0-14;21-26;28-30;32;36;51-57;60-63;70-73;81" dec="5399" hex="1517" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="5-55" name="Клемма 33, низкая частота (Гц)" type="Uint16" range="20-4999" dec="5549" hex="15AD" modify="ДА" mul="1" default="20" read="20">
+    </item>
+    <item number="5-56" name="Клемма 33,высокая частота (Гц)" type="Uint16" range="21-5000" dec="5559" hex="15C1" modify="ДА" mul="1" default="5000" read="5000">
+    </item>
+    <item number="5-57" name="Клемма 33, низкое задание / обратная связь" type="Int32" range="-4999-4999" dec="5569" hex="15B7" modify="ДА" mul="0.001" default="0.000" read="0">
+    </item>
+    <item number="5-58" name="Клемма 33,высокое задание / обратная связь" type="Int32" range="-4999-4999" dec="5579" hex="15CB" modify="ДА" mul="0.001" default="50.000" read="50">
+    </item>
+  </item>
+  <item name="Группа 6. Аналоговый ввод/выход.">
+    <item number="6-00" name="Время ожидания текущего нулевого значения (секунды)" type="Uint8" range="1-99" dec="5999" hex="176F" modify="ДА" mul="1" default="10" read="10">
+    </item>
+    <item number="6-01" name="Функция ожидания текущего нулевого значения" type="Uint8" range="0-5" dec="6009" hex="1779" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="6-10" name="Клемма 53, низкое напряжение (В)" type="Int16" range="0.00-9.99" dec="6099" hex="17D3" modify="ДА" mul="0.01" default="0.07" read="0.07">
+    </item>
+    <item number="6-11" name="Клемма 53, высокое напряжение (В)" type="Int16" range="0.10-10.00" dec="6109" hex="17DD" modify="ДА" mul="0.01" default="10.00" read="10">
+    </item>
+    <item number="6-12" name="Клемма 53, малый ток (мА)" type="Int16" range="0.00-19.99" dec="6119" hex="17E7" modify="ДА" mul="0.01" default="0.14" read="0.14">
+    </item>
+    <item number="6-13" name="Клемма 53, высокий ток (мА)" type="Int16" range="0.10-20.00" dec="6129" hex="17F1" modify="ДА" mul="0.01" default="20.00" read="20">
+    </item>
+    <item number="6-14" name="Клемма 53, низкое задание / обратная связь" type="Int32" range="-4999–4999" dec="6139" hex="17FB" modify="ДА" mul="0.001" default="0.000" read="0">
+    </item>
+    <item number="6-15" name="Клемма 53, высокое задание / обратная связь" type="Int32" range="-4999–4999" dec="6149" hex="1805" modify="ДА" mul="0.001" default="50.000" read="50">
+    </item>
+    <item number="6-16" name="Клемма 53, постоянная времени фильтра (секунды)" type="UInt16" range="0.01–10.00" dec="6159" hex="180F" modify="ДА" mul="0.01" default="0.01" read="0.01">
+    </item>
+    <item number="6-19" name="Клемма 53, режим: вход для клеммы 53" type="UInt8" range="0;1" dec="6189" hex="182D" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="6-22" name="Клемма 60, низкий ток (мА)" type="Int16" range="0.00-19.99" dec="6219" hex="184B" modify="ДА" mul="0.01" default="0.14" read="0.14">
+    </item>
+    <item number="6-23" name="Клемма 60, высокий ток (мА)" type="Int16" range="0.01-20.00" dec="6229" hex="1855" modify="ДА" mul="0.01" default="20.00" read="20">
+    </item>
+    <item number="6-24" name="Клемма 60, низкое задание / обратная связь" type="Int32" range="-4999-4999" dec="6239" hex="185F" modify="ДА" mul="0.001" default="0.000" read="0">
+    </item>
+    <item number="6-25" name="Клемма 60, высокое задание / обратная связь" type="Int32" range="-4999-4999" dec="6249" hex="1869" modify="ДА" mul="0.001" default="50.00" read="50">
+    </item>
+    <item number="6-26" name="Клемма 60, постоянная времени фильтра (секунды)" type="UInt16" range="0.01-10.00" dec="6259" hex="1873" modify="ДА" mul="0.01" default="0.01" read="0.01">
+    </item>
+    <item number="6-81" name="Потенциометр ЛПО, низкое значение задания" type="Int32" range="-4999-4999" dec="6809" hex="1A99" modify="ДА" mul="0.001" default="0.000" read="0">
+    </item>
+    <item number="6-82" name="Потенциометр ЛПО, высокое значение задания" type="Int32" range="-4999-4999" dec="6819" hex="1AA3" modify="ДА" mul="0.001" default="50.00" read="50">
+    </item>
+    <item number="6-90" name="Клемма 42, режим" type="UInt8" range="0,1,2" dec="6899" hex="1AF3" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="6-91" name="Клемма 42, аналоговый выход: функция" type="UInt8" range="0;10-13;16;20" dec="6909" hex="1AFD" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="6-92" name="Клемма 42, цифровой выход: функция" type="UInt8" range="0-14;21-26;28-30;32;36;51-57;60-63;70-73;80;81" dec="6919" hex="1B07" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="6-93" name="Клемма 42, масштаб минимального выходного сигнала (%)" type="UInt16" range="0.00-200.0" dec="6929" hex="1B11" modify="ДА" mul="0.01" default="0.00" read="0">
+    </item>
+    <item number="6-94" name="Клемма 42, масштаб максимального выходного сигнала (%)" type="UInt16" range="0.00-200.0" dec="6939" hex="1B1B" modify="ДА" mul="0.01" default="100.0" read="100">
+    </item>
+  </item>
+  <item name="Группа 7. Управление ПИ-регуляторным процессом">
+    <item number="7-20" name="Источник обратной связи управления процессом" type="Uint8" range="0-2;8;11" dec="7199" hex="1C1F" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="7-30" name="Режим управления ПИ-регуляторным процессом" type="Uint8" range="0;1" dec="7299" hex="1C83" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="7-31" name="Антираскрутка ПИ-регуляторного процесса" type="Uint8" range="0;1" dec="7309" hex="1C8D" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="7-32" name="Скорость пуска ПИ-регуляторного процесса (Гц)" type="Uint16" range="0.0-200.0" dec="7319" hex="1C97" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="7-33" name="Пропорциональный коэффициент усиления ПИ-регуляторного процесса" type="Uint16" range="0.00-10.00" dec="7329" hex="1CA1" modify="ДА" mul="0.01" default="0.01" read="0.01">
+    </item>
+    <item number="7-34" name="Постоянная времени интегрирования ПИ-регуляторного процесса (с)." type="Uint32" range="0.010-9999" dec="7339" hex="1CAB" modify="ДА" mul="0.01" default="9999" read="9999">
+    </item>
+    <item number="7-38" name="Коэффициент прямой связи ПИ-регуляторного процесса (%)." type="Uint16" range="0-400" dec="7379" hex="1CD3" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="7-39" name="Зона соответствия заданию (%)." type="Uint16" range="0-200" dec="7389" hex="1CDD" modify="ДА" mul="1" default="5" read="5">
+    </item>
+  </item>
+  <item name="Группа 8. Конфигурирование связи">
+    <item number="8-01" name=" Место управления" type="Uint8" range="0-2" dec="8009" hex="1F49" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="8-02" name="Источник командного слова" type="Uint8" range="0;1" dec="8019" hex="1F53" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="8-03" name="Время ожидания (таймаута) командного слова (секунды)." type="Uint16" range="0.1-6500" dec="8029" hex="1F5D" modify="ДА" mul="0.1" default="1.0" read="1">
+    </item>
+    <item number="8-04" name="Функция тайм-аута командного слова" type="Uint8" range="0-5;7-8" dec="8039" hex="1F67" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="8-06" name="Сброс ожидания (тайм-аута) командного слова" type="Uint8" range="0-1" dec="8059" hex="1F7B" modify="НЕТ" mul="1" default="0" read="0">
+    </item>
+    <item number="8-30" name="Протокол" type="Uint8" range="0;2" dec="8299" hex="206B" modify="ДА" mul="1" default="0" read="2">
+    </item>
+    <item number="8-31" name="Адрес для шины" type="Uint8" range="1-247" dec="8309" hex="2075" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="8-32" name="Скорость передачи данных" type="Uint8" range="0-4" dec="8319" hex="207F" modify="ДА" mul="1" default="2" read="4">
+    </item>
+    <item number="8-33" name="Контроль чентости" type="Uint8" range="0-3" dec="8329" hex="2089" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="8-35" name="Минимальная задержка реакции (миллисекунды)" type="Uint16" range="1-500" dec="8349" hex="209D" modify="ДА" mul="0.001" default="10" read="0.01">
+    </item>
+    <item number="8-36" name="Максимальная задержка реакции (секунды)" type="Uint16" range="0.010-10.00" dec="8359" hex="20A7" modify="ДА" mul="0.001" default="5.0" read="5">
+    </item>
+    <item number="8-50" name="Выбор выбега" type="Uint8" range="0-3" dec="8499" hex="2133" modify="ДА" mul="1" default="3" read="3">
+    </item>
+    <item number="8-51" name="Выбор быстрого останова" type="Uint8" range="0-3" dec="8509" hex="213D" modify="ДА" mul="1" default="3" read="3">
+    </item>
+    <item number="8-52" name="Выбор торможения постоянным током" type="Uint8" range="0-3" dec="8519" hex="2147" modify="ДА" mul="1" default="3" read="3">
+    </item>
+    <item number="8-53" name="Выбор пуска" type="Uint8" range="0-3" dec="8529" hex="2151" modify="ДА" mul="1" default="3" read="3">
+    </item>
+    <item number="8-54" name="Выбор реверса" type="Uint8" range="0-3" dec="8539" hex="215B" modify="ДА" mul="1" default="3" read="3">
+    </item>
+    <item number="8-55" name="Выбор набора" type="Uint8" range="0-3" dec="8549" hex="2165" modify="ДА" mul="1" default="3" read="3">
+    </item>
+    <item number="8-56" name="Выбор предустановленного задания" type="Uint8" range="0-3" dec="8559" hex="216F" modify="ДА" mul="1" default="3" read="3">
+    </item>
+    <item number="8-94" name="Конфигурирование обратной связи по шине" type="Uint16" range="0x8000-0x7FFF" dec="8939" hex="22EB" modify="ДА" mul="1" default="0" read="0">
+    </item>
+  </item>
+  <item name="Группа 13. Программируемый логический контроллер ПЧВ">
+    <item number="13-00" name="Режим ПЛК" type="Uint8" range="0-1" dec="12999" hex="32C7" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-01" name="Событие запуска" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13009" hex="32D1" modify="ДА" mul="1" default="39" read="39">
+    </item>
+    <item number="13-02" name="Событие останова: вход для выключения ПЛК" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13019" hex="32D8" modify="ДА" mul="1" default="40" read="40">
+    </item>
+    <item number="13-03" name="Сброс ПЛК" type="Uint8" range="0-1" dec="13029" hex="32E5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-10" name="Операнд компаратора [0]" reg="8" regidx="0" type="Uint8" range="0-4;6-13;18;20;30;31" dec="13099" hex="332B" modify="Да" mul="1" default="0" read="0">
+    </item>
+    <item number="13-10" name="Операнд компаратора [1]" reg="8" regidx="1" type="Uint8" range="0-4;6-13;18;20;30;31" dec="13099" hex="332B" modify="Да" mul="1" default="0" read="0">
+    </item>
+    <item number="13-10" name="Операнд компаратора [2]" reg="8" regidx="2" type="Uint8" range="0-4;6-13;18;20;30;31" dec="13099" hex="332B" modify="Да" mul="1" default="0" read="0">
+    </item>
+    <item number="13-10" name="Операнд компаратора [3]" reg="8" regidx="3" type="Uint8" range="0-4;6-13;18;20;30;31" dec="13099" hex="332B" modify="Да" mul="1" default="0" read="0">
+    </item>
+    <item number="13-11" name="Оператор компаратора (сравнения) [0]" reg="8" regidx="0" type="Uint8" range="0; 1; 2" dec="13109" hex="3335" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="13-11" name="Оператор компаратора (сравнения) [1]" reg="8" regidx="1" type="Uint8" range="0; 1; 2" dec="13109" hex="3335" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="13-11" name="Оператор компаратора (сравнения) [2]" reg="8" regidx="2" type="Uint8" range="0; 1; 2" dec="13109" hex="3335" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="13-11" name="Оператор компаратора (сравнения) [3]" reg="8" regidx="3" type="Uint8" range="0; 1; 2" dec="13109" hex="3335" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="13-12" name="Значение компаратора [0]" reg="8" regidx="0" type="Int32" range="-9999-9999" dec="13119" hex="333F" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="13-12" name="Значение компаратора [1]" reg="8" regidx="1" type="Int32" range="-9999-9999" dec="13119" hex="333F" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="13-12" name="Значение компаратора [2]" reg="8" regidx="2" type="Int32" range="-9999-9999" dec="13119" hex="333F" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="13-12" name="Значение компаратора [3]" reg="8" regidx="3" type="Int32" range="-9999-9999" dec="13119" hex="333F" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="13-20" name="Таймер ПЛК(секунды) [0]." reg="8" regidx="0" type="Uint32" range="0.0-3600 c" dec="13199" hex="338F" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="13-20" name="Таймер ПЛК(секунды) [1]." reg="8" regidx="1" type="Uint32" range="0.0-3600 c" dec="13199" hex="338F" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="13-20" name="Таймер ПЛК(секунды) [2]." reg="8" regidx="2" type="Uint32" range="0.0-3600 c" dec="13199" hex="338F" modify="ДА" mul="0.1" default="0.0" read="0">
+    </item>
+    <item number="13-40" name="Булева переменная логического соотношения 1 [0]" reg="8" regidx="0" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13399" hex="3457" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-40" name="Булева переменная логического соотношения 1 [1]" reg="8" regidx="1" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13399" hex="3457" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-40" name="Булева переменная логического соотношения 1 [2]" reg="8" regidx="2" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13399" hex="3457" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-40" name="Булева переменная логического соотношения 1 [3]" reg="8" regidx="3" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13399" hex="3457" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-41" name="Оператор логического соотношения 1 [0]" reg="8" regidx="0" type="Uint8" range="0-8" dec="13409" hex="3461" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-41" name="Оператор логического соотношения 1 [1]" reg="8" regidx="1" type="Uint8" range="0-8" dec="13409" hex="3461" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-41" name="Оператор логического соотношения 1 [2]" reg="8" regidx="2" type="Uint8" range="0-8" dec="13409" hex="3461" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-41" name="Оператор логического соотношения 1 [3]" reg="8" regidx="3" type="Uint8" range="0-8" dec="13409" hex="3461" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-42" name="Булева переменная логического соотношения 2 [0]" reg="8" regidx="0" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13419" hex="346B" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-42" name="Булева переменная логического соотношения 2 [1]" reg="8" regidx="1" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13419" hex="346B" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-42" name="Булева переменная логического соотношения 2 [2]" reg="8" regidx="2" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13419" hex="346B" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-42" name="Булева переменная логического соотношения 2 [3]" reg="8" regidx="3" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13419" hex="346B" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-43" name="Оператор логического соотношения 2 [0]" reg="8" regidx="0" type="Uint8" range="0-8" dec="13429" hex="3475" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-43" name="Оператор логического соотношения 2 [1]" reg="8" regidx="1" type="Uint8" range="0-8" dec="13429" hex="3475" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-43" name="Оператор логического соотношения 2 [2]" reg="8" regidx="2" type="Uint8" range="0-8" dec="13429" hex="3475" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-43" name="Оператор логического соотношения 2 [3]" reg="8" regidx="3" type="Uint8" range="0-8" dec="13429" hex="3475" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-44" name="Булева переменная логического соотношения 3 [0]" reg="8" regidx="0" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13439" hex="347F" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-44" name="Булева переменная логического соотношения 3 [1]" reg="8" regidx="1" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13439" hex="347F" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-44" name="Булева переменная логического соотношения 3 [2]" reg="8" regidx="2" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13439" hex="347F" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-44" name="Булева переменная логического соотношения 3 [3]" reg="8" regidx="3" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13439" hex="347F" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [0]" reg="8" regidx="0" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [1]" reg="8" regidx="1" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [2]" reg="8" regidx="2" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [3]" reg="8" regidx="3" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [4]" reg="8" regidx="4" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [5]" reg="8" regidx="5" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [6]" reg="8" regidx="6" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [7]" reg="8" regidx="7" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [8]" reg="8" regidx="8" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [9]" reg="8" regidx="9" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [10]" reg="8" regidx="10" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [11]" reg="8" regidx="11" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [12]" reg="8" regidx="12" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [13]" reg="8" regidx="13" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [14]" reg="8" regidx="14" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [15]" reg="8" regidx="15" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [16]" reg="8" regidx="16" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [17]" reg="8" regidx="17" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [18]" reg="8" regidx="18" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-51" name="Событие ПЛК [19]" reg="8" regidx="19" type="Uint8" range="0-4;7-9;16-19;20-29;33-36;39-40" dec="13509" hex="34C5" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [0]" reg="8" regidx="0" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [1]" reg="8" regidx="1" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [2]" reg="8" regidx="2" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [3]" reg="8" regidx="3" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [4]" reg="8" regidx="4" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [5]" reg="8" regidx="5" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [6]" reg="8" regidx="6" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [7]" reg="8" regidx="7" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [8]" reg="8" regidx="8" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [9]" reg="8" regidx="9" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [10]" reg="8" regidx="10" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [11]" reg="8" regidx="11" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [12]" reg="8" regidx="12" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [13]" reg="8" regidx="13" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [14]" reg="8" regidx="14" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [15]" reg="8" regidx="15" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [16]" reg="8" regidx="16" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [17]" reg="8" regidx="17" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [18]" reg="8" regidx="18" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="13-52" name="Действие ПЛК [19]" reg="8" regidx="19" type="Uint8" range="0-3;10-19;22-33;38;39;60;61" dec="13519" hex="34Cf" modify="ДА" mul="1" default="0" read="0">
+    </item>
+  </item>
+  <item name="Группа 14. Специальные функции ПЧВ">
+    <item number="14-01" name="Частота коммутации (переключений)(кГц) " type="Uint8" range="0-4" dec="14009" hex="36B9" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="14-03" name="Сверхмодуляция" type="Uint8" range="0-1" dec="14029" hex="36CD" modify="ДА" mul="1" default="1" read="1">
+    </item>
+    <item number="14-12" name="Функции приасимметрии сети питания." type="Uint8" range="0-2" dec="14119" hex="3727" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="14-20" name="Режим сброса:функция сброса после отключения." type="Uint8" range="0-13" dec="14199" hex="3777" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="14-21" name="Время автоматического перезапуска (секунды)" type="Uint16" range="0-600" dec="14209" hex="3781" modify="Да" mul="1" default="10" read="10">
+    </item>
+    <item number="14-22" name="Режим работы." type="Uint8" range="0,2" dec="14219" hex="378B" modify="ДА" mul="1" default="0" read="0">
+    </item>
+    <item number="14-26" name="Действие на Инвертор Отказ" type="Uint8" range="0,1" dec="14259" hex="37B3" modify="ДА" mul="1" default="0" read="1">
+    </item>
+    <item number="14-41" name="Минимальное намагничивание при АОЭ (%)." type="Uint8" range="40-75" dec="14409" hex="3849" modify="ДА" mul="1" default="66" read="66">
+    </item>
+  </item>
+  <item name="Группа 15. Информация о работе ПЧВ">
+    <item number="15-00" name="Рабочие дни" type="Uint32" range="0-65535" dec="14999" hex="3A97" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-01" name="Рабочие часы" type="Uint32" range="0-2147483647" dec="15009" hex="3AA1" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-02" name="Счетчик KBт ч." type="Uint32" range="0-65535" dec="15019" hex="3AAB" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-03" name="Включения питания ." type="Uint32" range="0-2147483647" dec="15029" hex="3AB5" modify="НЕТ" mul="1" read="3">
+    </item>
+    <item number="15-04" name="Превышение температуры" type="Uint16" range="0-65535" dec="15039" hex="3ABF" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-05" name="Превышение вольт." type="Uint16" range="0-65535" dec="15049" hex="3AC9" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-06" name="Сброс счетчика кВт´ч" type="Uint8" range="0;1" dec="15059" hex="3AD3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-07" name="Сброс счетчика наработки." type="Uint8" range="0;1" dec="15069" hex="3ADD" modify="НЕТ" mul="1" read="0">
+    </item>
+    <!--item number="15-30" name="Журнал аварий:код ошибки [0]" reg="8" regidx="0" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-30" name="Журнал аварий:код ошибки [1]" reg="8" regidx="1" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-30" name="Журнал аварий:код ошибки [2]" reg="8" regidx="2" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-30" name="Журнал аварий:код ошибки [3]" reg="8" regidx="3" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-30" name="Журнал аварий:код ошибки [4]" reg="8" regidx="4" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-30" name="Журнал аварий:код ошибки [5]" reg="8" regidx="5" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-30" name="Журнал аварий:код ошибки [6]" reg="8" regidx="6" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-30" name="Журнал аварий:код ошибки [7]" reg="8" regidx="7" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-30" name="Журнал аварий:код ошибки [8]" reg="8" regidx="8" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-30" name="Журнал аварий:код ошибки [9]" reg="8" regidx="9" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1">
+    </item-->
+    <!-->item number="15-43" name="Версия программного обеспечения" type="VisStr[5]" range="" dec="15429" hex="3C45" modify="НЕТ" mul="1">
+    </item>
+    <item number="15-51" name="Заводской номер ПЧВ" type="VisStr[10]" range="" dec="15509" hex="3C95" modify="НЕТ" mul="1">
+    </item-->
+  </item>
+  <item name="Группа 16. Считывание рабочих характеристик">
+    <item number="16-00" name="Командное слово " type="Uint16" range="0-0XFFFF" dec="15999" hex="3E7F" modify="НЕТ" mul="1" read="1084">
+    </item>
+    <item number="16-01" name="Задание (ед. изм.)" type="Int32" range="-4999-4999" dec="16009" hex="3E89" modify="НЕТ" mul="0.001" read="0">
+    </item>
+    <item number="16-02" name="Задание (%)" type="Int16" range="-200.0-200.0" dec="16019" hex="3E93" modify="НЕТ" mul="0.1" read="0">
+    </item>
+    <item number="16-03" name="Слово состояния." type="Int16" range="0-0xFFFF" dec="16029" hex="3E9D" modify="НЕТ" mul="1" read="515">
+    </item>
+    <item number="16-05" name="Главное действительное значение [%]" type="Int16" range="-100-100" dec="16049" hex="3EB1" modify="НЕТ" mul="0.01" read="0">
+    </item>
+    <item number="16-09" name="Настраиваемый вывод на дисплей" type="Int32" range="" dec="16089" hex="3ED9" modify="НЕТ" mul="0.01" read="0">
+    </item>
+    <item number="16-10" name="Мощность (кВт)" type="Int16" range="0-99" dec="16099" hex="3EE3" modify="НЕТ" mul="0.001" read="0">
+    </item>
+    <item number="16-11" name="Мощность (л.с.)" type="Int16" range="0-99" dec="16109" hex="3EDD" modify="НЕТ" mul="0.001" read="0">
+    </item>
+    <item number="16-12" name="Напряжение электродвигателя (В)." type="Uint16" range="0.0-999.0" dec="16119" hex="3EF7" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-13" name="Частота (Гц)" type="Uint16" range="0.0-400.0" dec="16129" hex="3F01" modify="НЕТ" mul="0.1" read="0">
+    </item>
+    <item number="16-14" name="Ток двигателя (А)." type="Int16" range="0.00-1856.0" dec="16139" hex="3F0B" modify="НЕТ" mul="0.01" read="0">
+    </item>
+    <item number="16-15" name="Частота (%)" type="Int16" range="-100.00-100.00" dec="16149" hex="3F15" modify="НЕТ" mul="0.1" read="0">
+    </item>
+    <item number="16-18" name="Тепловая нагрузка двигателя (%)." type="Uint8" range="0-100" dec="16179" hex="3F33" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-30" name="Напряжение цепи постоянного тока (В)" type="Uint16" range="0-10000" dec="16299" hex="3FAB" modify="НЕТ" mul="1" read="528">
+    </item>
+    <item number="16-34" name="Температура радиатора, ºС" type="Uint8" range="0-255" dec="16339" hex="3FD3" modify="НЕТ" mul="1" read="28">
+    </item>
+    <item number="16-35" name="Тепловая нагрузка инвертора (%)" type="Uint8" range="0-100" dec="16349" hex="3FDD" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-36" name="Номинальный ток инвертора (А)." type="UInt16" range="0.01-10000.00" dec="16359" hex="3FE7" modify="НЕТ" mul="0.01" read="9">
+    </item>
+    <item number="16-37" name="Максимальный ток инвертора (А)." type="UInt16" range="0.01-10000.00" dec="16369" hex="3FF1" modify="НЕТ" mul="0.01" read="13.5">
+    </item>
+    <item number="16-38" name="Состояние ПЛК" type="Uint8" range="0-255" dec="16379" hex="3FFB" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-50" name="Внешнее задание(%)" type="Int16" range="-200.0-200.0" dec="16499" hex="4073" modify="НЕТ" mul="0.1" read="0">
+    </item>
+    <item number="16-51" name="Импульсное задание (%)" type="Int16" range="-200.0-200.0" dec="16509" hex="407D" modify="НЕТ" mul="0.1" read="0">
+    </item>
+    <item number="16-52" name="Обратная связь(Гц)." type="Int32" range="-4999.0-4999.0" dec="16519" hex="4087" modify="НЕТ" mul="0.001" read="0">
+    </item>
+    <item number="16-60" name="Цифровой вход 18,19,27,33" type="Uint16" range="0-4369" dec="16599" hex="40D7" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-61" name="Цифровой вход 29" type="Uint8" range="0-1" dec="16609" hex="40E1" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-62" name="Аналоговый вход 53 (Вольт)" type="Int16" range="0.00-10.00" dec="16619" hex="40EB" modify="НЕТ" mul="0.01" read="0">
+    </item>
+    <item number="16-63" name="Аналоговый вход 53 (ток) (мА)" type="Uint16" range="0.00-20.00" dec="16629" hex="40F5" modify="НЕТ" mul="0.01" read="0.01">
+    </item>
+    <item number="16-64" name="Аналоговый вход 60 (ток) (мА)" type="Uint16" range="0.00-20.00" dec="16639" hex="40FF" modify="НЕТ" mul="0.01" read="0">
+    </item>
+    <item number="16-65" name="Аналоговый вход 42 (ток) (мА)" type="Uint16" range="0.00-20.00" dec="16649" hex="4109" modify="НЕТ" mul="0.01" read="0">
+    </item>
+    <item number="16-68" name="Импульсный вход(Гц)." type="Int16" range="20-5000" dec="15049" hex="4127" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-71" name="Релейный выход(двоичный):" type="Int16" range="0-1" dec="16709" hex="4175" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-72" name="Счетчик А." type="Int32" range="-2147483648-2147483648" dec="16719" hex="414F" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-73" name="Счетчик B." type="Int32" range="-2147483648-2147483648" dec="16729" hex="4159" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="16-86" name="Порт REF 1 (Порт ПЧВ, задание 1) " type="Int16" range="0x8000–0х7FFFF" dec="16859" hex="41DB" modify="НЕТ" mul="1" read="0">
+    </item>
+  </item>
+  <item name="Группа 18. Расширенные данные электродвигателя">
+    <item number="18-80" name="Активное сопротивление статора (высокое разрешение), мОм" type="Uint32" range="0.000-99.900" dec="18799" hex="496F" modify="НЕТ" mul="0.001" read="0.87">
+    </item>
+    <item number="18-81" name="Реактивное сопротивление утечки статора (высокое разрешение), мОм" type="Uint32" range="0.000-99.900" dec="18809" hex="4979" modify="НЕТ" mul="0.001" read="2.56">
+    </item>
+  </item>
+  <item name="Быстрое меню 1. Основные настройки двигателя." id="shortmenu1">
+    <item number="1-20" name="Мощность двигателя" type="Uint16" range="1-20" dec="1199" hex="4AF" modify="ДА" mul="1">
+    </item>
+    <item number="1-22" name="Напряжение двигателя (В)." type="Uint16" range="50-999" dec="1219" hex="4C3" modify="ДА" mul="1" default="400">
+    </item>
+    <item number="1-23" name="Частота двигателя (Гц)." type="Uint16" range="20-400" dec="1229" hex="4CD" modify="ДА" mul="1" default="50">
+    </item>
+    <item number="1-24" name="Ток двигателя (А)." type="UInt16" range="0,01-43,00" dec="1239" hex="4D7" modify="ДА" mul="0.01">
+    </item>
+    <item number="1-25" name="Номинальная скорость двигателя (об./мин)" type="Uint16" range="100-9999" dec="1249" hex="4E1" modify="ДА" mul="1">
+    </item>
+    <item number="1-29" name="Автоматическая адаптация двигателя (ААД)" type="Uint8" range="0,2" dec="1289" hex="509" modify="ДА" mul="1" default="0">
+    </item>
+    <item number="3-02" name="Минимальное задание." type="Int32" range="-4999-4999" dec="3019" hex="BCB" modify="ДА" mul="0.001" default="0.000">
+    </item>
+    <item number="3-03" name="Максимальное задание." type="Int32" range="-4999-4999;" dec="3029" hex="BD5" modify="ДА" mul="0.001" default="50.00">
+    </item>
+    <item number="3-41" name="Время разгона 1(секунды)" type="Uint32" range="0,05 - 3600" dec="3409" hex="D51" modify="ДА" mul="0.01" default="3.0">
+    </item>
+    <item number="3-42" name="Время замедления 1 (секунды)" type="Uint32" range="0,05 - 3600" dec="3419" hex="D5B" modify="ДА" mul="0.01" default="3.0">
+    </item>
+  </item>
+  <item name="Быстрое меню 2. Основные настройки ПИ-регулятора." id="shortmenu2">
+    <item number="1-00" name="Режим управления" type="Uint8" range="0,3" dec="999" hex="3E7" modify="ДА" mul="1" default="0">
+    </item>
+    <item number="3-02" name="Минимальное задание." type="Int32" range="-4999-4999" dec="3019" hex="BCB" modify="ДА" mul="0.001" default="0.000">
+    </item>
+    <item number="3-03" name="Максимальное задание." type="Int32" range="-4999-4999;" dec="3029" hex="BD5" modify="ДА" mul="0.001" default="50.00">
+    </item>
+    <item number="3-10" name="Предустановленное задание [0]." reg="8" regidx="0" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00">
+    </item>
+    <item number="3-10" name="Предустановленное задание [1]." reg="8" regidx="1" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00">
+    </item>
+    <item number="3-10" name="Предустановленное задание [2]." reg="8" regidx="2" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00">
+    </item>
+    <item number="3-10" name="Предустановленное задание [3]." reg="8" regidx="3" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00">
+    </item>
+    <item number="3-10" name="Предустановленное задание [4]." reg="8" regidx="4" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00">
+    </item>
+    <item number="3-10" name="Предустановленное задание [5]." reg="8" regidx="5" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00">
+    </item>
+    <item number="3-10" name="Предустановленное задание [6]." reg="8" regidx="6" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00">
+    </item>
+    <item number="3-10" name="Предустановленное задание [7]." reg="8" regidx="7" type="Int16" range="-100.0-100.0" dec="3099" hex="C1B" modify="ДА" mul="0.01" default="0.00">
+    </item>
+    <item number="4-12" name="Нижний предел скорости вращения двигателя (Гц)" type="Uint16" range="0-400" dec="4119" hex="1017" modify="ДА" mul="0.1" default="0.0">
+    </item>
+    <item number="4-14" name="Верхний предел скорости вращения двигателя (Гц)" type="Uint16" range="0-400;" dec="4139" hex="102B" modify="ДА" mul="0.1" default="65.0">
+    </item>
+    <item number="6-22" name="Клемма 60, низкий ток (мА)" type="Int16" range="0.00-19.99" dec="6219" hex="184B" modify="ДА" mul="0.01" default="0.14">
+    </item>
+    <item number="6-23" name="Клемма 60, высокий ток (мА)" type="Int16" range="0.01-20.00" dec="6229" hex="1855" modify="ДА" mul="0.01" default="20.00">
+    </item>
+    <item number="6-24" name="Клемма 60, низкое задание / обратная связь" type="Int32" range="-4999-4999" dec="6239" hex="185F" modify="ДА" mul="0.001" default="0.000">
+    </item>
+    <item number="6-25" name="Клемма 60, высокое задание / обратная связь" type="Int32" range="-4999-4999" dec="6249" hex="1869" modify="ДА" mul="0.001" default="50.00">
+    </item>
+    <item number="6-26" name="Клемма 60, постоянная времени фильтра (секунды)" type="UInt16" range="0.01-10.00" dec="6259" hex="1873" modify="ДА" mul="0.01" default="0.01">
+    </item>
+    <item number="7-20" name="Источник обратной связи управления процессом" type="Uint8" range="0-2;8;11" dec="7199" hex="1C1F" modify="ДА" mul="1" default="0">
+    </item>
+    <item number="7-30" name="Режим управления ПИ-регуляторным процессом" type="Uint8" range="0;1" dec="7299" hex="1C83" modify="ДА" mul="1" default="0">
+    </item>
+    <item number="7-31" name="Антираскрутка ПИ-регуляторного процесса" type="Uint8" range="0;" dec="7309" hex="1C8D" modify="ДА" mul="1" default="1">
+    </item>
+    <item number="7-32" name="Скорость пуска ПИ-регуляторного процесса (Гц)" type="Uint16" range="0.0-200.0" dec="7319" hex="1C97" modify="ДА" mul="0.1" default="0.0">
+    </item>
+    <item number="7-33" name="Пропорциональный коэффициент усиления ПИ-регуляторного процесса" type="Uint16" range="0.00-10.00" dec="7329" hex="1CA1" modify="ДА" mul="0.01" default="0.01">
+    </item>
+    <item number="7-34" name="Постоянная времени интегрирования ПИ-регуляторного процесса (с)." type="Uint32" range="0.010-9999" dec="7339" hex="1CAB" modify="ДА" mul="0.01" default="9999">
+    </item>
+    <item number="7-38" name="Коэффициент прямой связи ПИ-регуляторного процесса (%)." type="Uint16" range="0-400" dec="7379" hex="1CD3" modify="ДА" mul="1" default="0">
+    </item>
+  </item>
+  <item name="Аварии">
+    <item number="15-30" name="Авария [0]" reg="8" regidx="0" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-30" name="Авария [1]" reg="8" regidx="1" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-30" name="Авария [2]" reg="8" regidx="2" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-30" name="Авария [3]" reg="8" regidx="3" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-30" name="Авария [4]" reg="8" regidx="4" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-30" name="Авария [5]" reg="8" regidx="5" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-30" name="Авария [6]" reg="8" regidx="6" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-30" name="Авария [7]" reg="8" regidx="7" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-30" name="Авария [8]" reg="8" regidx="8" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+    <item number="15-30" name="Авария [9]" reg="8" regidx="9" type="Uint8" range="0-255" dec="15299" hex="3BC3" modify="НЕТ" mul="1" read="0">
+    </item>
+  </item>
+  <item name="Удаленное управление" id="remotecontrol">
+    <item number="16-13" name="Частота (Гц)" type="Uint16" range="0.0-400.0" dec="16129" hex="3F01" modify="НЕТ" mul="0.1">
+    </item>
+    <item number="16-14" name="Ток двигателя (А)." type="Int16" range="0.00-1856.0" dec="16139" hex="3F0B" modify="НЕТ" mul="0.01">
+    </item>
+    <item number="16-12" name="Напряжение электродвигателя (В)." type="Uint16" range="0.0-999.0" dec="16119" hex="3EF7" modify="НЕТ" mul="1">
+    </item>
+    <item number="16-15" name="Частота (%)" type="Int16" range="-100.00-100.00" dec="16149" hex="3F15" modify="НЕТ" mul="0.1">
+    </item>
+  </item>
+  <item name="ПИ регулирование" id="pidcontrol">
+    <item number="1-00" name="Режим управления" type="Uint8" range="0,3" dec="999" hex="3E7" modify="ДА" mul="1" default="0">
+    </item>
+    <item number="7-20" name="Источник обратной связи управления процессом" type="Uint8" range="0-2;8;11" dec="7199" hex="1C1F" modify="ДА" mul="1" default="0">
+    </item>
+    <item number="7-30" name="Режим управления ПИ-регуляторным процессом" type="Uint8" range="0;1" dec="7299" hex="1C83" modify="ДА" mul="1" default="0">
+    </item>
+    <item number="7-33" name="Пропорциональный коэффициент усиления ПИ-регуляторного процесса" type="Uint16" range="0.00-10.00" dec="7329" hex="1CA1" modify="ДА" mul="0.01" default="0.01">
+    </item>
+    <item number="7-34" name="Постоянная времени интегрирования ПИ-регуляторного процесса (с)." type="Uint32" range="0.010-9999" dec="7339" hex="1CAB" modify="ДА" mul="0.01" default="9999">
+    </item>
+    <item number="7-39" name="Зона соответствия заданию (%)." type="Uint16" range="0-200" dec="7389" hex="1CDD" modify="ДА" mul="1" default="5">
+    </item>
+  </item>
+  <item name="Аналоговые входы/выходы" id="analogio" />
+  <item name="Дискретные входы/выходы" id="settingsio" />
+  <item name="Скалярное управление U/f" id="scalarcontrol" />
+  <item name="Выбор заданий" id="taskselection" />
+</root>
