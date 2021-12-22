@@ -2,3 +2,5 @@
 *.bootinfo
 *.bootinfo_guids
 *.compileinfo
+*.imgcache
+*.~u
